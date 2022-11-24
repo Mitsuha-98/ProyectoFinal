@@ -2,7 +2,8 @@
 #fototit{
     width: 250px; height: 70px;
     border-radius: 0.2rem;
-    margin-left: 0.3rem;}
+    margin-left: 0.3rem;
+  }
 
     #logo{
      display: flex;
@@ -10,63 +11,130 @@
     text-align: right;
     justify-content: end;
     width: 50px; height: 50px;
-    margin: 1rem 88% auto; 
+    margin: 1rem 80% auto;
     border-radius: 0.9rem;}
 
     .card{
-    margin: 0 auto;}
+    margin: 0 auto;
+  background-color: black;
+  color: #ffffff;}
 
     .header {
-     max-height: 299px;
+
+        max-height: 70%;
+        box-shadow: 0.21rem 0.1rem 0.1rem black;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1;
     border-radius: 0.8rem;
-     top: 0 auto; 
-     box-shadow: 0.2rem 0.1rem 0.4rem black;} 
+     top: 0 auto;
+     box-shadow: 0.2rem 0.1rem 0.4rem black;}
 
      .header img{
     cursor: pointer;}
 
     .header img:hover{
-    box-shadow: 0rem 0.1rem 0.1rem black;}    
+    box-shadow: 0rem 0.1rem 0.1rem black;}
 
-    .menus img{
-    max-width: 300px;
-    max-height: 300px;
-    width: 250px; height: 70px;
-    border-radius: 0.5rem;}
+    #menues img{
+    max-width: 27rem; 
+    max-height: 17rem;
+    height: 500px;
+
+    margin: 0 auto; 
+    padding-top: 0.5rem;
+    border-radius: 0.8rem;}
 
     .card:hover{
-    box-shadow: 0.2rem 0.1rem 0.4rem black;}
+    box-shadow: 0.1rem 0.2rem 0.5rem rgba(124, 124, 124, 0.336);}
 
     .container{
 
     text-align: center;
     margin: 0 auto;
-    padding: 10px;}
+     padding: 10px;}
 
     body{
   background-color:#f9f6f4;}
 
-  .menus:hover{
+  .menues:hover{
     box-shadow: 0.3rem 0.3rem 0.4rem black;}
 
-    .menus {
+    .menues{
  background-color: #ffffff;
  border: 1px solid black;
- 
- margin: 7px;
- cursor: pointer;}
-
+ cursor: pointer;
+  max-height: 20%;}
+h1{
+  color: #ffffff;
+  background-color: black;
+  border-radius: 1.5rem;
+  padding-left: 47%;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  
+}
  .foot a:visited {
     color: white}
 .foot a:hover{
     color: rgba(0, 0, 0, 0.486);}
 
     .foot{
-    position: fixed
+    position: fixed;
     border-top: 1rem;
     color:  white;
-    max-height: 900px;
+    width: 100%;
     height: 200px ;
     background-color: rgb(234, 4, 78);
     padding-left: 2%;
-    margin-top: 7rem;}
+    margin-top: 20%;}
+   
+   
+    .form-control
+    {
+      margin-top: 5PX;
+      margin-bottom: 5px;
+      width: 100%;
+      float: center ;
+    }
+    #login{
+      margin-top: 5%;
+      background-color: rgb(234, 4, 78);
+      color:white;
+      max-width: 600px;
+    }
+
+    #entrar{
+      margin: 2%;
+    }
+
+    #datos{
+      margin-top: 5%;
+      background-color: rgb(0, 0, 0);
+      color:white;
+      max-width: 900px;
+      padding:20px
+    }
+    @media screen and (max-width: 1378px){
+      #fototit{
+        width: 250px; height: 70px;
+        margin: 0 40% ;
+        }
+        #logo{
+          visibility:hidden;
+          margin: 0 80%;
+        }
+      }
+
+      #guardar{
+        max-width: 50%;
+        margin: 0 auto;
+      }
+      #login{
+        border-radius: 0.5rem;
+      }
+
+      body{
+        background-image: "https://img.freepik.com/fotos-premium/fondo-madera-negra-textura-madera-vieja-fondo-tablones-madera-rustico-negro-oscuro-vacio_430468-496.jpg?w=2000";
+      }

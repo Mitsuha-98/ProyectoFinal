@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="https://play-lh.googleusercontent.com/QTL4zl6hukny5XrTW3PnNf9OH0E5osKG-DfrGEQ1YwRt1FoYdaHynTtlc0MyCq1w2mhq=w240-h480-rw">
+    <link rel="stylesheet" href="Deco.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/Bootstrap5.js"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/alertify.js"></script>
+    <script src="js/selectmenu.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PedidosYa</title>
+</head>
+<body background="https://img.freepik.com/fotos-premium/fondo-madera-negra-textura-madera-vieja-fondo-tablones-madera-rustico-negro-oscuro-vacio_430468-496.jpg?w=2000">
+    
+
+    <div class="header">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img value = "Refresh" onclick="history.go(0)"src="https://i.ibb.co/WPjp3YT/Pedidos-Ya2.png" alt="pedidosya" id = "fototit">
+        <img value = "Refresh" onclick="history.go(0)" src="https://live.pystatic.com/webassets/NavigationMenu-Web/navigation-menu-parcel/2.0.0/images/pedidosya.png" alt="logo" id="logo">
+      </nav>
+      
+</div>
+<div>
+  
+</div>
+<div class="container-sm" id="login">
+  <div class="row">
+      <div class="row-cols-md">
+        <label>Usuario</label> 
+        <input id="usuario" type="text" class="form-control" placeholder="Usuario"> 
+        <label>Contraseña</label>                       
+        <input id="contraseña" type="password" class="form-control" placeholder="Contraseña">  
+        <button id="entrar" class="btn btn-primary">Ingresar</button>              
+      </div>
+  </div>
+</div>
+<div class ="container-xl" id="menues">
+    <h1>Menu</h1>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/FJKXKQKMMJBV7KQ7XQ3YNFO7LU.jpg" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Menu 1</h5>
+          <p class="card-text">Precio $2000</p>
+          <p>Una hamburgesa estilo gourmet como las de "Martitegui"</p>
+          <button id="compra1" class="btn btn-primary">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://i.ibb.co/FBvdN56/Mila-napo.jpg" alt="Mila-napo">
+        <div class="card-body">
+          <h5 class="card-title">Menu 2</h5>
+          <p class="card-text">Precio $1750</p>
+          <p>Una milanesa napolitana con papas fritas</p>
+          <button id="compra2" class="btn btn-primary">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://assets.unileversolutions.com/recipes-v2/219888.jpg" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Menu 3</h5>
+          <p class="card-text">Precio $1500</p>
+          <p>Pizza tamaño chica con albahaca</p>
+          <button id="compra3" class="btn btn-primary">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://www.frizata.com/ar/files/products/622b8f225a2fb-27-4.jpg" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Menu 4</h5>
+          <p class="card-text">Precio $1300</p>
+          <p>Empanada de jamon y queso especialidad de la casa</p>
+          <button id="compra4" class="btn btn-primary">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-xl" id="datos">
+  <div class="row">
+      <div class="col-4">
+          <label>Nombre</label>                    
+      </div>   
+      <div class="col-8">
+      <input id="nombre" type="text" class="form-control"placeholder="Ingrese su nombre">     
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-4">
+          <label>Dirección</label>                    
+      </div>   
+      <div class="col-8">
+      <input id="Dir" type="text" class="form-control"placeholder="Ingrese su dirección">     
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-4">
+          <label>Telefono</label>                    
+      </div>   
+      <div class="col-8">
+      <input id="telefono" type="text" class="form-control"placeholder="Ingrese su telefono">  
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+        <label>Costo de su pedido</label>                    
+    </div>   
+    <div class="col-8">
+    <input id="costo"type="text" class="form-control" disabled>     
+    </div>
+    <button id="guardar" class="btn btn-primary">Guardar datos</button>  
+</div>
+</div>
+    <div class="foot" id="foot">
+    <footer >
+        <a href="https://github.com/MarianoHGarcia/ProyectoFinal">Quienes somos?</a>
+    </footer>
+    </div>
+
+
+
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
+
+
