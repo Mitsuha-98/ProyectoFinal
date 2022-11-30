@@ -1,0 +1,76 @@
+--Creación de tablas
+create TABLE usuario (id_usuario VARCHAR(20) PRIMARY KEY, nombre_usuario VARCHAR(20), contraseña VARCHAR(20), dirección VARCHAR(20));
+SELECT * FROM usuario;
+CREATE TABLE producto (id_producto VARCHAR(20) primary key , descripción VARCHAR (20), proveedor VARCHAR (20));
+SELECT * FROM producto;
+CREATE TABLE pedido (producto VARCHAR(20) , usuario Varchar(20), cantidad INT, id_factura VARCHAR PRIMARY KEY(30), monto INT);
+SELECT * FROM pedido;
+CREATE TABLE factura (id_factura varchar(20) PRIMARY Key , monto int , tipo_pago varchar (20));
+
+--usuario
+INSERT INTO usuario VALUES ('25','Laura','1234', 'uruguay 2210');
+INSERT INTO usuario VALUES ('224','Mariano','12223', 'Ruperto 2210');
+INSERT INTO usuario VALUES ('258','Flora Ferreira','3822', 'PAMPA 2210');
+INSERT INTO usuario VALUES ('785','Milo Martinez','12348', 'pilcomayo 2210');
+INSERT INTO usuario VALUES ('897','Diego Pili','8734', 'uruguay 2055');
+select * from usuario;
+
+--producto <id_producto, descripción, proveedor>
+INSERT INTO producto VALUES ('875', 'Hamburguesas', 'Roberto');
+INSERT INTO producto VALUES('691', 'Carne', 'Baggio');
+INSERT INTO producto VALUES ('60' , 'tomate', 'Lucia S.A');
+INSERT INTO producto VALUES('741', 'Hamburguesas pollo', 'Pollejeria A');
+INSERT INTO producto values ('496' , 'Lechuga y repollo', 'Walter white');
+INSERT into producto VALUES ('369', 'Big Mc', 'Express');
+select * from producto
+
+--pedido <producto, usuario, cantidad, id_factura, monto>
+INSERT into pedido VALUES ('875', 'Laura', 32, '84', 55);
+INSERT into pedido VALUES ('691', 'Maria Laura', 65, '74', 12);
+INSERT into pedido VALUES ('60', 'Marcos', 92, '740', 120);
+INSERT into pedido VALUES ('741' , 'Florencia', 32, '840', 45);
+INSERT into pedido VALUES ('496', 'Miguel Mariano', 23, '784', 654);
+INSERT into pedido VALUES ('369', 'Mariano', 65, '174', 120);
+INSERT into pedido VALUES ('32', 'Flora Ferreira', 92, '760', 1280);
+INSERT into pedido VALUES ('032', 'Milo Martinez', 32, '184', 450);
+INSERT into pedido VALUES ('73', 'Diego Pili', 23, '96', 6500);
+select * from pedido;
+
+-- ingresamos factura
+--(id_factura, monto int , tipo_pago efectivo, crédito o aplicación);
+INSERT into factura VALUES ('84' , 950, 'Crédito');
+INSERT into factura VALUES ('74' , 1365, 'Efectivo');
+INSERT into factura VALUES ('740' , 2050, 'Aplicación');
+INSERT into factura VALUES ('840' , 3006, 'Efectivo');
+INSERT into factura VALUES ('784' , 5600, 'Efectivo');
+select * from factura;
+
+--Hacer un select que una los pedidos y los usuarios que los hicieron. Visualizar solo las columnas de
+--nombre de usuario, el producto, la cantidad y el monto
+select nombre_usuario, producto ,cantidad , pedido.monto
+from pedido inner join usuario on pedido.usuario= usuario.nombre_usuario
+
+--select de los pedidos y las facturas de esos pedidos. Visualizar solo las columnas de
+--producto, el monto y el medio de pago
+select producto, factura.monto, tipo_pago
+from pedido inner join factura on pedido.id_factura= factura.id_factura;
+
+--tuve que actualizar unos datos
+UPDATE producto SET id_producto=60 WHERE id_producto = 124;
+UPDATE producto SET id_producto=741 WHERE id_producto = 9636;
+UPDATE producto SET id_producto=496 WHERE id_producto = 877;
+select * from producto;
+
+
+--select que una los pedidos y los productos de esos pedidos. Visualizar solo las columnas
+--de descripción, cantidad y monto.
+select descripción, pedido.monto, cantidad
+from pedido inner join producto on pedido.producto= producto.id_producto;
+
+--Seleccionar todas las facturas por un monto mayor a 500.
+select * from factura where monto>500
+
+--Cambiar todas las facturas que digan aplicación a débito.
+UPDATE factura SET tipo_pago='débito' WHERE tipo_pago = 'Aplicación';
+
+
